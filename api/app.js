@@ -24,6 +24,8 @@ app.get('/hello', (req, res) => {
 	})
 })
 
+app.use('/api/tasks', require('./routes/tasks.routes.js'))
+
 const port = process.env.PORT || 3000
 const listen = app.listen(port, () => console.log('App is listening in ' + port))
 module.exports = listen
